@@ -1,0 +1,33 @@
+1.github注册账号
+2.git安装
+3.基本信息设置：
+		git config --global user.name 'pengqingbin'
+		git config --global user.email '15715652414@163.com'
+4.mkdir 创建文件夹然后cd进去
+5.创建文件  (git status 查看状态)
+6.创建玩的文件编辑完，可以git add上存到暂存区：git add .上传当前目录的全部文件
+7.git commit将暂存区的文件上传到git库（以上操作都是在本地的）
+8.删除库文件：git rm xxx后git commit -m 'xxxx'添加删除描述
+9.git config --list    查看信息   git config --global user.name 查看当前用户名  
+ git config --global user.email查看当前email设置
+10.git diff来查看一下修改的区别
+11.显示Log信息git log --pretty=oneline,一行的方式显示
+12.git restet --hard xxxxx(id码)回到过去版本
+12.回到过去之后再 回到之前最新版本,需要指令:git reflog得到最新的commit id得到，然后git reset --hard xxx(commit id)
+13.拉取线上最新版本:git pull
+14.ssh协议：安装OpenSSH：https://jingyan.baidu.com/article/1709ad804fff584634c4f029.html
+，ssh-keygen -t rsa -C "注册邮箱"后，生成客户端公钥对，将公钥上传到github
+
+15.分支相关指令：
+	查看分支：git branch
+	创建分支：git branch 分支名
+	切换分支：git checkout 分支名
+	创建并切换分支：git checkout -b 分支名
+	删除分支：git branch -d 分支名
+	合并分支：git merge 被合并的分支名
+
+16.忽略文件：需新建一个名为.gitignore的文件，用于声明忽略或不忽略文件的规则，规则对当前目录及子目录生效
+规则：/mtk/	过滤整个文件夹
+	*.zip	过滤多有.zip文件
+	/mtk/do.c 过滤某个具体文件
+	lindex.php 不过滤某个文件          
